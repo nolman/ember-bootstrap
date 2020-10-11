@@ -42,7 +42,7 @@ export function findElementById(doc, id) {
 // renderer, be it native browser DOM or Fastboot SimpleDOM
 export function getDOM(context) {
   let { renderer } = context;
-  if (!renderer._dom) {
+  if (!renderer?._dom) {
     // pre glimmer2
     let container = getOwner ? getOwner(context) : context.container;
     let documentService = container.lookup('service:-document');
