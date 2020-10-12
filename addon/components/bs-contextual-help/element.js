@@ -99,7 +99,7 @@ export default class ContextualHelpElement extends Component {
    * @private
    */
   get popperModifiers() {
-    let id = this.args.id;
+    let { id } = this.args;
     return {
       arrow: {
         element: `.${this.arrowClass}`,
